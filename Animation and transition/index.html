@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation and Transition</title>
+
+  <style>
+    /* ---------- BACKGROUND ANIMATION ---------- */
+    body {
+      background: rgb(100, 0, 255);
+      background-size: 300% 300%;
+      animation: moveBG 10s infinite alternate ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    @keyframes moveBG {
+      0% { background: rgb(90, 0, 180); }
+      50% { background: rgb(160, 0, 220); }
+      100% { background: rgb(100, 0, 255); }
+    }
+
+    /* ---------- TITLE ---------- */
+    h1 {
+      color: rgb(255, 255, 100);
+      margin-bottom: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 30px;
+      animation: glowText 3s infinite alternate ease-in-out, slideIn 1.5s ease;
+    }
+
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glowText {
+      0% { text-shadow: 0 0 5px rgb(255,255,0), 0 0 10px rgb(255,255,0); }
+      100% { text-shadow: 0 0 20px rgb(255,255,120), 0 0 40px rgb(255,255,150); }
+    }
+
+    /* ---------- TEAM SECTION ---------- */
+    .team {
+      display: flex;
+      gap: 35px;
+      margin-top: 20px;
+    }
+
+    /* ---------- CARD ---------- */
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      width: 250px;
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      color: #fff;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      transform: scale(0.9);
+      animation: cardPop 1s ease forwards;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    @keyframes cardPop {
+      0% { opacity: 0; transform: scale(0.5) rotateY(60deg); }
+      100% { opacity: 1; transform: scale(1) rotateY(0deg); }
+    }
+
+    .card:hover {
+      transform: scale(1.08) translateY(-10px);
+      box-shadow: 0 25px 60px rgba(255, 255, 255, 0.4);
+    }
+
+    /* ---------- PROFILE IMAGE ---------- */
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid rgb(255, 255, 120);
+      margin-bottom: 15px;
+      animation: floaty 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes floaty {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-12px); }
+    }
+
+    /* ---------- NAME ---------- */
+    .name {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 10px;
+      animation: fadeInName 1.5s ease;
+    }
+
+    @keyframes fadeInName {
+      0% { opacity: 0; transform: translateX(-20px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    /* ---------- ROLE ---------- */
+    .role {
+      color: #d1d1d1;
+      font-size: 16px;
+      margin: 8px 0 18px;
+      font-style: italic;
+      animation: fadeRole 2s infinite alternate;
+    }
+
+    @keyframes fadeRole {
+      0% { opacity: 1; }
+      100% { opacity: 0.7; }
+    }
+
+    /* ---------- BUTTON ---------- */
+    .btn {
+      padding: 10px 22px;
+      border: none;
+      border-radius: 30px;
+      background: rgb(255, 100, 150);
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      animation: pulse 2s infinite alternate;
+      transition: transform 0.4s ease, background 0.4s ease;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px rgb(255, 200, 200); }
+      100% { box-shadow: 0 0 25px rgb(255, 255, 150); }
+    }
+
+    .btn:hover {
+      transform: scale(1.15);
+      background: rgb(255, 255, 120);
+      color: rgb(80, 0, 130);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Those Who Submit Assignment Before Solution</h1>
+  <h1>Great Work Keep It Up </h1>
+
+  <div class="team">
+    <div class="card">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.5BrwonF_9f0O_7bZ-XcJLQHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" class="profile-pic" alt="smit">
+      <h3 class="name">Mujtaba Khan</h3>
+      <p class="role">First Position </p>
+      <button class="btn">View Profile</button>
+    </div>
+
+    <div class="card">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.5BrwonF_9f0O_7bZ-XcJLQHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" class="profile-pic" alt="smit">
+      <h3 class="name">Rehan Mughal</h3>
+      <p class="role">Second Position </p>
+      <button class="btn">View Profile</button>
+    </div>
+
+    <div class="card">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.5BrwonF_9f0O_7bZ-XcJLQHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" class="profile-pic" alt="smit">
+      <h3 class="name">Sher Ullah</h3>
+      <p class="role">Third Position </p>
+      <button class="btn">View Profile</button>
+    </div>
+  </div>
+</body>
+</html>

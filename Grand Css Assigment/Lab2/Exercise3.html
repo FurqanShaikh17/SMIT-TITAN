@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 50px;
+  }
+
+  .container {
+    display: flex;
+    background-color: #dcdcdc;
+    width: 800px;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .sidebar {
+    width: 200px;
+    margin-right: 20px;
+  }
+
+  .sidebar a {
+    display: block;
+    text-decoration: none;
+    color: orange;       
+    background-color: #ffffff;
+    padding: 8px 10px;
+    border-right: 8px solid green;
+    margin-bottom: 6px;
+  }
+
+  .sidebar a:hover {
+    background-color: #f5f5f5;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  .content h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 0;
+  }
+
+  .content p {
+    color: #000;
+    line-height: 1.5;
+  }
+
+  .date {
+    font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="sidebar">
+      <a href="#">Home page</a>
+      <a href="#">About</a>
+      <a href="#">Contact us</a>
+      <a href="#">Others</a>
+    </div>
+
+    <div class="content">
+      <h1>My first page styled with CSS</h1>
+      <p>Welcome to my page!</p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi nostrum 
+        placeat odio voluptatem, explicabo distinctio accusamus, numquam quaerat 
+        facere, expedita atque molestias quia deserunt. Id explicabo molestiae est 
+        ad deleniti!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus 
+        corporis esse adipisci officiis cumque excepturi temporibus inventore, sit 
+        eligendi incidunt laborum eum cupiditate dignissimos, ducimus impedit nihil, 
+        aperiam eos unde.
+      </p>
+      <div class="date">23 Feb 2021</div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      grid-template-rows: 80px auto 80px;
+      grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+      width: 90%;
+      gap: 10px;
+    }
+
+    header {
+      grid-area: header;
+      background-color: blueviolet;
+      color: white;
+      text-align: center;
+      font-size: 24px;
+      padding: 20px;
+    }
+
+    main {
+      grid-area: main;
+      display: grid;
+      grid-template-rows: repeat(6, auto);
+      gap: 10px;
+    }
+
+    article {
+      background-color: #eee;
+      text-align: center;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 18px;
+    }
+
+    aside {
+      grid-area:aside;
+      background-color: lightblue;
+      text-align: center;
+      font-size: 20px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: gold;
+      text-align: center;
+      font-weight: bold;
+      font-size: 22px;
+      padding: 20px;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <header>Header</header>
+
+    <main>
+      <article>Article 1</article>
+      <article>Article 2</article>
+      <article>Article 3</article>
+      <article>Article 4</article>
+      <article>Article 5</article>
+      <article>Article 6</article>
+    </main>
+
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f7fb;
+  }
+
+  .quiz-box {
+    background: #fff;
+    border: 6px solid #007bff;
+    border-radius: 8px;
+    width: 420px;
+    padding: 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+
+
+  .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding: 12px 18px;
+  }
+
+  .quiz-header h3 {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .time-box {
+    background: #f1f6ff;
+    border: 1px solid #d2e3ff;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+
+  .quiz-body {
+    padding: 18px;
+  }
+
+  .question {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+
+  .option {
+    background: #f9fbff;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .option:hover {
+    background: #e6f0ff;
+  }
+
+  .correct {
+    background: #d3f9d8;
+    border-color: #89e589;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .wrong {
+    background: #ffd6d6;
+    border-color: #ff9b9b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .quiz-footer {
+    border-top: 2px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+  }
+
+  .quiz-footer span {
+    font-size: 14px;
+  }
+
+  button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  button:hover {
+    background: #0056b3;
+  }
+
+
+  .tick::after {
+    content: "✔";
+    color: green;
+    font-weight: bold;
+  }
+
+  .cross::after {
+    content: "✖";
+    color: red;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <div class="quiz-box">
+    <div class="quiz-header">
+      <h3>Awesome Quiz Application</h3>
+      <div class="time-box">Time Left: 08</div>
+    </div>
+
+    <div class="quiz-body">
+      <div class="question">1. What does HTML stand for?</div>
+      <div class="option">Hyper Text Preprocessor</div>
+      <div class="option correct">Hyper Text Markup Language <span class="tick"></span></div>
+      <div class="option wrong">Hyper Text Multiple Language <span class="cross"></span></div>
+      <div class="option">Hyper Tool Multi Language</div>
+    </div>
+
+    <div class="quiz-footer">
+      <span>1 of 5 Questions</span>
+      <button>Next Que</button>
+    </div>
+  </div>
+</body>
+</html>
